@@ -34,6 +34,7 @@
   
 .container {
   max-width: 300vh;
+  height: auto;
 }
 
 
@@ -43,11 +44,36 @@
       display: grid;
       grid-template-columns: 1fr 1fr 2fr;
       grid-template-areas: 
+      'header header header'
+      'img img img'
+      'article1 article1 article1'
+      'article2 article2 article2'
+      'article3 article3 article3'
+      'article4 article4 article4'
+      ;
+      gap: 5px;
+      justify-content: space-between;
+}
+
+@media screen and (min-width:500px) {
+
+.grid {
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+        'header header'
+        'article1  img'
+        'article2 img'
+        'article3  article4';
+}
+}
+
+@media screen and (min-width: 800px) {
+  .grid {
+  grid-template-areas: 
       'header header img'
       'article1 article2 img'
       'article3 article4 img';
-      gap: 1px;
-      justify-content: space-between;
+}
 }
 
     header {
@@ -115,6 +141,9 @@
           <h1>You know best</h1>
           <p>
             Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Delectus tenetur obcaecati
+            neque autem, accusamus
+            consequatur voluptate.Lorem ipsum dolor, sit amet consectetur
             adipisicing elit. Delectus tenetur obcaecati
             neque autem, accusamus
             consequatur voluptate.
